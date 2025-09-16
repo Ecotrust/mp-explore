@@ -1,7 +1,7 @@
 # Create your views here.
 from django.shortcuts import get_object_or_404, render
 from django.template import RequestContext
-from data_manager.models import *
+from layers.models import Layer, Theme
 
 
 # from marco/utils.py
