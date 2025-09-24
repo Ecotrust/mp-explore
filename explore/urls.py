@@ -13,5 +13,6 @@ urlpatterns = [
     re_path(r'^map_tile_esri_example/([\w-]*)', map_tile_esri_example),
     re_path(r'^map_tile_leaflet_example/([\w-]*)', map_tile_leaflet_example),
     re_path(r'^arcrest_example/([\w-]*)', arcrest_example),
-    re_path(r'^([\w-]*)/', tiles_page),
+    # re_path(r'^([\w-]*)/', tiles_page),
+    re_path(r'^([\w\s\(\)-]*)/', tiles_page),
 ]
