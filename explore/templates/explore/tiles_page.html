@@ -84,8 +84,9 @@ map.addLayer(layer);
         The {{layer.name}} dataset is consumed from an external ArcGIS web service via the following URL and ID
     </p>
  <div class="row">
-<pre>{{arcrest_url}}
-ID: {{layer.specific_instance.arcgis_layers}}</pre>
+    <pre>{{arcrest_url}}
+{% if layer.specific_instance.arcgis_layers %}{% if layer.specific_instance.arcgis_layers == '' or layer.specific_instance.arcgis_layers == None %}ID: 0{% else %}ID: {{layer.specific_instance.arcgis_layers}}{% endif %}{% else %}ID: 0{% endif %}</pre>
+
 </div>
 
     <!-- Removed OL2 references. RDH 2025-09-24 -->
